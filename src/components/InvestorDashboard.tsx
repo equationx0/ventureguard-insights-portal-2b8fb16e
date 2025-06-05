@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -91,7 +90,6 @@ const InvestorDashboard = ({ onBack }: InvestorDashboardProps) => {
             </div>
             
             <div className="flex items-center space-x-4">
-              <span className="text-gray-600">Инвесторская панель</span>
               <User className="w-6 h-6 text-gray-400" />
             </div>
           </div>
@@ -102,7 +100,7 @@ const InvestorDashboard = ({ onBack }: InvestorDashboardProps) => {
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="grid w-full grid-cols-2 max-w-md">
             <TabsTrigger value="search" className="text-lg">Поиск стартапов</TabsTrigger>
-            <TabsTrigger value="portfolio" className="text-lg">Личный кабинет</TabsTrigger>
+            <TabsTrigger value="portfolio" className="text-lg">Портфель</TabsTrigger>
           </TabsList>
 
           <TabsContent value="search" className="mt-8">

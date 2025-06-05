@@ -1,8 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Download, Upload, CheckCircle, XCircle, Clock, AlertTriangle } from "lucide-react";
+import { ArrowLeft, Download, Upload, CheckCircle, XCircle, Clock, Send } from "lucide-react";
 
 interface EntrepreneurDashboardProps {
   onBack: () => void;
@@ -87,7 +86,7 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
             </div>
             
             <div className="flex items-center space-x-4">
-              <span className="text-gray-600">Личный кабинет предпринимателя</span>
+              {/* Убираем текст, оставляем только иконку пользователя */}
             </div>
           </div>
         </div>
@@ -109,9 +108,13 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
               <Download className="w-4 h-4 mr-2" />
               Скачать шаблон паспорта стартапа
             </Button>
+            <Button className="bg-venture-green hover:bg-green-600 text-white px-6">
+              <Send className="w-4 h-4 mr-2" />
+              Подать заявку на финансирование
+            </Button>
             <Button variant="outline" className="px-6">
               <Upload className="w-4 h-4 mr-2" />
-              Подать новую заявку
+              Загрузить документы
             </Button>
           </div>
         </Card>
@@ -125,7 +128,7 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h4 className="text-xl font-bold mb-2">{app.projectName}</h4>
-                  <p className="text-gray-600">Подано: {new Date(app.submittedDate).toLocaleDateString()}</p>
+                  <p className="text-gray-600 text-base">Подано: {new Date(app.submittedDate).toLocaleDateString()}</p>
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold venture-blue mb-2">{app.amount}</div>
@@ -141,11 +144,11 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
                 <div>
                   <span className="text-sm text-gray-500 block">Уникальность</span>
                   {app.uniqueness ? (
-                    <span className={`font-semibold ${app.uniqueness >= 70 ? 'venture-green' : 'venture-red'}`}>
+                    <span className={`font-semibold text-base ${app.uniqueness >= 70 ? 'venture-green' : 'venture-red'}`}>
                       {app.uniqueness}%
                     </span>
                   ) : (
-                    <span className="text-gray-400">Проверяется...</span>
+                    <span className="text-gray-400 text-base">Проверяется...</span>
                   )}
                 </div>
                 <div>
@@ -160,11 +163,11 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
                   <span className="text-sm text-gray-500 block">Действия</span>
                   <div className="flex gap-2">
                     {app.status === "rejected" && (
-                      <Button size="sm" variant="outline" className="text-xs">
+                      <Button size="sm" variant="outline" className="text-sm">
                         Подать апелляцию
                       </Button>
                     )}
-                    <Button size="sm" variant="outline" className="text-xs">
+                    <Button size="sm" variant="outline" className="text-sm">
                       Подробнее
                     </Button>
                   </div>
@@ -176,7 +179,7 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
                 <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded">
                   <div className="flex items-center gap-2 mb-2">
                     <CheckCircle className="w-5 h-5 venture-green" />
-                    <span className="font-medium venture-green">Заявка одобрена!</span>
+                    <span className="font-medium venture-green text-base">Заявка одобрена!</span>
                   </div>
                   <p className="text-sm text-gray-600">
                     Поздравляем! Ваша заявка прошла все проверки и одобрена для финансирования. 
@@ -189,7 +192,7 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
                 <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded">
                   <div className="flex items-center gap-2 mb-2">
                     <Clock className="w-5 h-5 venture-yellow" />
-                    <span className="font-medium text-yellow-800">На рассмотрении</span>
+                    <span className="font-medium text-yellow-800 text-base">На рассмотрении</span>
                   </div>
                   <p className="text-sm text-gray-600">
                     Ваша заявка находится в процессе проверки. Среднее время рассмотрения: 5-7 рабочих дней.
@@ -201,7 +204,7 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded">
                   <div className="flex items-center gap-2 mb-2">
                     <XCircle className="w-5 h-5 venture-red" />
-                    <span className="font-medium venture-red">Заявка отклонена</span>
+                    <span className="font-medium venture-red text-base">Заявка отклонена</span>
                   </div>
                   <p className="text-sm text-gray-600 mb-2">
                     Причина: {app.rejectionReason}
@@ -220,19 +223,19 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
           <h3 className="text-xl font-bold mb-4">Нужна помощь?</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-blue-50 rounded">
-              <h4 className="font-medium mb-2">Как заполнить паспорт стартапа?</h4>
+              <h4 className="font-medium mb-2 text-base">Как заполнить паспорт стартапа?</h4>
               <p className="text-sm text-gray-600">Подробное руководство по заполнению документов</p>
-              <Button variant="link" className="p-0 h-auto venture-blue">Читать →</Button>
+              <Button variant="link" className="p-0 h-auto venture-blue text-base">Читать →</Button>
             </div>
             <div className="p-4 bg-blue-50 rounded">
-              <h4 className="font-medium mb-2">Критерии оценки проектов</h4>
+              <h4 className="font-medium mb-2 text-base">Критерии оценки проектов</h4>
               <p className="text-sm text-gray-600">Узнайте, как мы оцениваем стартапы</p>
-              <Button variant="link" className="p-0 h-auto venture-blue">Узнать →</Button>
+              <Button variant="link" className="p-0 h-auto venture-blue text-base">Узнать →</Button>
             </div>
             <div className="p-4 bg-blue-50 rounded">
-              <h4 className="font-medium mb-2">Техническая поддержка</h4>
+              <h4 className="font-medium mb-2 text-base">Техническая поддержка</h4>
               <p className="text-sm text-gray-600">Свяжитесь с нами для получения помощи</p>
-              <Button variant="link" className="p-0 h-auto venture-blue">Написать →</Button>
+              <Button variant="link" className="p-0 h-auto venture-blue text-base">Написать →</Button>
             </div>
           </div>
         </Card>
