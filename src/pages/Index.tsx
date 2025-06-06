@@ -54,7 +54,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-2xl">🔒</span>
               </div>
@@ -64,7 +64,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-2xl">🎯</span>
               </div>
@@ -74,7 +74,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-2xl">📊</span>
               </div>
@@ -84,7 +84,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-2xl">⚡</span>
               </div>
@@ -94,7 +94,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-2xl">🏛️</span>
               </div>
@@ -104,7 +104,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-2xl">💰</span>
               </div>
