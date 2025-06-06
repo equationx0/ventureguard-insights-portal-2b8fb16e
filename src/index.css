@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -104,17 +103,13 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-feature-settings: 'ss01';
   }
 }
 
 @layer utilities {
   /* Premium Typography */
-  .font-display {
-    font-family: 'Playfair Display', serif;
-  }
-  
   .font-inter {
     font-family: 'Inter', sans-serif;
   }
