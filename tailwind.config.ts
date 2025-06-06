@@ -21,7 +21,6 @@ export default {
 		extend: {
 			fontFamily: {
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
-				'display': ['Playfair Display', 'serif'],
 				'inter': ['Inter', 'sans-serif'],
 			},
 			colors: {
@@ -67,6 +66,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				venture: {
+					blue: 'hsl(195 100% 45%)',
+					'light-blue': 'hsl(195 70% 85%)',
+					green: 'hsl(142 76% 36%)',
+					yellow: 'hsl(45 93% 58%)',
+					orange: 'hsl(25 95% 53%)',
+					red: 'hsl(0 84% 60%)'
 				}
 			},
 			borderRadius: {
