@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -195,7 +196,7 @@ const EntrepreneurDashboard = ({ onBack }: EntrepreneurDashboardProps) => {
                     <span className="font-medium text-yellow-800 text-base">На рассмотрении</span>
                   </div>
                   <p className="text-sm text-gray-600">
-                    Ваша заявка находится в процессе проверки. Среднее время рассмотрения: 5-7 рабочих дней.
+                    Ваша заявка находится в процессе проверки. Среднее время рассмотрения: 3-4 минуты.
                   </p>
                 </div>
               )}
